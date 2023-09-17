@@ -1,0 +1,9 @@
+# Define config variables
+DB_USER = "_SYSTEM"
+DB_PASS = "SYS"
+DB_URL = "iris"
+DB_PORT = '1972'
+DB_NAMESPACE = "USER"
+HUGGINGFACEHUB_API_TOKEN = "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"
+PALM_API_KEY = "AIzaSyDmwLWPnbAOv79Uzes9dyQrK3MKZEWer7U"
+OPENAI_API_KEY = ""

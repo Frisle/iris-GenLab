@@ -1,3 +1,15 @@
+## Sentiment analysis: is a text positive or negative?
+## Text generation (in English): provide a prompt and the model will generate what follows.
+## Name entity recognition (NER): in an input sentence, label each word with the entity it represents (person, place, etc.)
+## Question answering: provide the model with some context and a question, extract the answer from the context.
+## Filling masked text: given a text with masked words (e.g., replaced by [MASK]), fill the blanks.
+## Summarization: generate a summary of a long text.
+## Translation: translate a text in another language.
+## Feature extraction: return a tensor representation of the text.
+
+
+
+
 ## iris-embedded-python-template
 This is a template to work with Embedded Python in InterSystems IRIS
 It demonstrates how to call python libs from ObjectScript in dc.python.test class.
@@ -107,8 +119,12 @@ So you have 2 options to work with Embedded Python in IRIS:
 # attach to the running IRIS container
 docker-compose exec iris bash
 # run the script
-$ irispython ./python/irisapp.py
+$ irispython ./python/app.py
 ```
+
+http://localhost:55038/csp/sys/UtilHome.csp
+
+
 The script contains different samples of working with IRIS from python and goes through it.
 it should return something like this:
 ```

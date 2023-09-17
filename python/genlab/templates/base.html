@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static',filename='main.css') }}">
+<style type="text/css">
+	.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+#custom_card{
+	background-color:grey;
+	color:#fff;
+	padding:10px;
+}
+#custom_card2{
+	background-color:#4285f4;
+	color:#fff;
+	padding:10px;
+}
+</style>
+  
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  
+<!-- example 1 - using absolute position for center -->
+<nav class="navbar navbar-expand-md navbar-light justify-content-center" style="background:#351275">  
+  <div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="collapsingNavbar">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-item nav-link text-light" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link text-light" href="/ner">NER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link text-light" href="/sentimental">Sentimental Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link text-light" href="/tgpt2">Text Generation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link text-light" href="/palmapi">Palm API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link text-light" href="/gflan">Google Flan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link text-light" href="/openai">OpenAI</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+        <div class="btn-group">
+             <button  type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+               {{ user.username }}</button>
+             <ul class="dropdown-menu">
+               <li> <a class="dropdown-item text-dark" href="/change-password">Change Password</a></li>
+               <li> <a class="dropdown-item text-dark" href="/logout">Logout</a></li>
+             </ul>
+           </div>
+
+       {% else %}
+       <a class="nav-item nav-link text-light" href="/login">Login</a>
+       <a class="nav-item nav-link text-light" href="/sign-up">Sign Up</a>
+       {% endif %}
+      </ul>
+  </div>
+  </div>
+</nav>
+
+   
+<div class="jumbotron" style="background:#673AB7;color:#fff">
+    <div class="container">
+      {% block head %}{% endblock %}            
+    </div>
+  </div>
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+<div class="container" >
+  {% block content %}{% endblock %}
+<div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="{{ url_for('static',filename='images/chat-support-icon.png') }}" alt="image">                       
+
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">iris-Generative Lab app support</h4>
+                    <p class="chatbox__description--header">Hi. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+
+ <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} 
+
+{% block head %}
+      <h2 class="display-4">IRIS Generative Lab </h2>
+      <p>Generative AI has made significant strides in recent years, and its applications continue to expand as it becomes more sophisticated and capable of producing high-quality outputs across different domains. </p>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-sm-4">
+		<a href="/ner">  	
+		<div class="card">
+		  <div class="image">
+			 <img src="{{ url_for('static',filename='images/ner.png') }}" alt="image" />                       
+		  </div>
+		  <div class="card-inner">
+			<div class="header">
+			  <h4>Named entity recognition</h4>		
+		  </div>
+		  <div class="content">
+			<p>wtih spaCy, a open-source library for Natural Language Processing (NLP) in Python</p>
+		  </div>
+			</div>
+		</div>
+		</a>
+	  </div>
+
+<div class="col-sm-4">
+	<a href="/sentimental">  	
+	<div class="card">
+	  <div class="image">
+		<img src="{{ url_for('static',filename='images/sentimental.png') }}" alt="image" />                
+	  </div>
+	  <div class="card-inner">
+		<div class="header">
+		  <h4>Sentiment Analysis </h4>		 
+	  </div>
+	  <div class="content">
+		<p>Sentiment analysis is an approach to natural language processing (NLP) that identifies the emotional</p>
+	  </div>
+		</div>
+	</div>
+	</a>
+  </div>
+  <div class="col-sm-4">
+	<a href="/tgpt2">  	
+	<div class="card">
+	  <div class="image">
+		<img src="{{ url_for('static',filename='images/tgpt2.png') }}" alt="image" />            
+	  </div>
+	  <div class="card-inner">
+		<div class="header">
+		  <h4>Text Generation with gpt2</h4>
+		</div>
+	  <div class="content">
+		<p>Text generation with the help of GPT2 LLM (Large Language Model) model and Hugging Face pipeline </p>
+	  </div>
+		</div>
+	</div>
+</a>
+  </div><div class="col-sm-4">
+	<a href="/palmapi">  	
+	<div class="card">
+	  <div class="image">
+		<img src="{{ url_for('static',filename='images/palmapi.png') }}" alt="image" />   
+	  </div>
+	  <div class="card-inner">
+		<div class="header">
+		  <h4>Google PALM API</h4>		  		 
+	  </div>
+	  <div class="content">
+		<p>Access the advanced capabilities of Google's large language models (LLM) like PaLM2 with the PaLM API.</p>
+	  </div>
+		</div>
+	</div>
+	</a>
+  </div><div class="col-sm-4">
+	<a href="/gflan">  	
+	<div class="card">
+	  <div class="image">
+		<img src="{{ url_for('static',filename='images/gflan.png') }}" alt="image" />
+	  </div>
+	  <div class="card-inner">
+		<div class="header">
+		  <h4>Google Flan-T5 XXL</h4>
+	  </div>
+	  <div class="content">
+		<p>Flan-T5 is fine-tuned on a large corpus of text data that was not filtered for explicit contents. </p>
+	  </div>
+		</div>
+	</div>
+	</a>
+  </div>
+  <div class="col-sm-4">
+	<a href="/openai">  	
+	<div class="card">
+	  <div class="image">
+		<img src="{{ url_for('static',filename='images/openai.png') }}" alt="image" />
+	  </div>
+	  <div class="card-inner">
+		<div class="header">
+		  <h4>OpenAI ChatGPT</h4>
+		  </div>
+	  <div class="content">
+		<p>OpenAI is a private research laboratory that aims to develop and direct artificial intelligence (AI).</p>
+	  </div>
+		</div>
+	</div>
+  </div>
+</a>
+</div>
+{% endblock %}
+
