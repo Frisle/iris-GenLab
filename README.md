@@ -79,33 +79,43 @@ irispython ./python/app.py
 
 To run the application Navigate to [**http://localhost:4040**](http://localhost:4040) 
 #### Home Page
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/3041ee1a-6f04-47df-a82c-f4157780ff79)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/de2c53c6-669f-414a-9939-83ce7e645211)
+
 
 #### Register a User
 To register a user, Click on Sign Up link
-![signup](https://github.com/mwaseem75/iris-GenLab/assets/18219467/a0b613d6-7c1c-4607-9f77-a9c7c953e095)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/4ed2fb6b-3da6-4c65-b791-b40c5e7c9280)
+
 
 Once registered, the user will log in automatically, To sign out click on the User Name link and then click on Sign out.
 In order to log in, click on sign in link
-![login](https://github.com/mwaseem75/iris-GenLab/assets/18219467/126c3546-4f62-409c-91fd-38db23471eb6)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/83e0776c-2c87-4a6e-adf4-141065db0451)
+
 
 #### Named entity recognition (NER)
-![ner](https://github.com/mwaseem75/iris-GenLab/assets/18219467/4e33e5f5-210e-4670-8aca-11a31b3d9a91)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/03116a37-e6e9-4029-adb8-e8ccab8985cf)
+
 
 #### Sentiment analysis
-![sentimental](https://github.com/mwaseem75/iris-GenLab/assets/18219467/4cbbc28f-7fd3-4dad-a664-55d247c4836a)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/46779e19-426e-4bda-97ca-9c3b89cd00b7)
+
 
 #### HuggingFace, Text generation (Gpt-2)
-![tgpt2](https://github.com/mwaseem75/iris-GenLab/assets/18219467/8080f974-0109-4c13-a1bb-b8614facfa55)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/92b75591-2e63-4e6a-ab26-1f3d67814fee)
+
 
 #### Google PALM API
-![palmAPI](https://github.com/mwaseem75/iris-GenLab/assets/18219467/32f97af1-c59a-41a0-a6b5-02ae075e7e3f)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/665e8e13-ecbe-4548-bb9e-3555c35d452d)
+
 
 #### Google Flan-T5 XXL
-![gflan](https://github.com/mwaseem75/iris-GenLab/assets/18219467/fa104fdf-d419-43d2-8249-2ef6dcccff39)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/b37f3fae-5244-4c29-ba34-fc5a8339da9c)
+
 
 #### OpenAI
-![openAI](https://github.com/mwaseem75/iris-GenLab/assets/18219467/8f0291b7-4c43-4eea-a4c7-cb3101e6a77d)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/b577c5e1-d59a-4d8c-a27e-10be8894382c)
+
+
 
 
 ## Application database
@@ -116,7 +126,8 @@ SQLALchemy will create below table:
 To view table details, navigate to 
 http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&
 [**http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&**](http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&)
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/281125ab-4ce0-406c-8bd4-159ca7d9424a)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/a4d5d474-65eb-4026-a59b-7727fe7c592d)
+
 
 
 ## Special Thanks to:
