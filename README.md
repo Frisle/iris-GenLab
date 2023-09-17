@@ -52,7 +52,8 @@ Signup with hugging face and navigate to setting [Hugging Face account settings]
 
 ## Google Palm Api [PALM_API_KEY]
 Navigate to [Google Palm Api Key page](https://makersuite.google.com/app/apikey), Click on "Create API Key in new project" and get API Key
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/bec58b1b-a4d3-4655-ba9a-ea46884abad0)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/1f0af75b-d24e-49fa-abb1-19b0dba5d4eb)
+
 
 
 #### Get OpenAI Key [OPENAI_API_KEY]
@@ -60,7 +61,8 @@ Application requires OpenAI API Key, sign up for OpenAI API on [this page](https
 ![image](https://github.com/mwaseem75/irisChatGPT/assets/18219467/7e7c7880-b9ac-4a60-9ec9-289dd2375a73)
 
 Open myconfig.py file in python/genlab folder and enter the keys
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/6ad5f32a-f96d-4f52-8c0c-d17b6ecbe8f6)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/ac91af95-d307-4269-896b-441c1fcbd8ab)
+
 
 
 ## Run the application
@@ -72,7 +74,8 @@ Now run below command to start flask application
 ```
 irispython ./python/app.py
 ```
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/1585dd85-3ac0-47a8-8858-cd844b13a2a1)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/57c75351-2405-4488-b092-ae40d090aa16)
+
 
 To run the application Navigate to [**http://localhost:4040**](http://localhost:4040) 
 #### Home Page
