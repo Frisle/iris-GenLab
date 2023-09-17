@@ -63,13 +63,13 @@ Open myconfig.py file in python/genlab folder and enter the keys
 
 ## Run the application
 Run the below command in Git Bash terminal
-'''
+```
 docker-compose exec iris bash
-'''
+```
 Now run below command to start flask application
-'''
+```
 irispython ./python/app.py
-'''
+```
 ![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/1585dd85-3ac0-47a8-8858-cd844b13a2a1)
 
 To run the application Navigate to [**http://localhost:4040**](http://localhost:4040) 
