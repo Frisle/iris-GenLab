@@ -23,7 +23,7 @@ classifier = pipeline('sentiment-analysis')
 classifier = pipeline('text-generation', model = 'gpt2')
    
 # load ipm package listed in module.xml
-#iris.cls('%ZPM.PackageManager').Shell("load /home/irisowner/dev -v")
+iris.cls('%ZPM.PackageManager').Shell("load /home/irisowner/dev -v")
 
 
 
