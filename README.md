@@ -47,11 +47,13 @@ docker-compose up -d
 ## Required Keys
 #### HuggingFace [HUGGINGFACEHUB_API_TOKEN]
 Signup with hugging face and navigate to setting [Hugging Face account settings](https://huggingface.co/settings/tokens), click on the new token to create a new token  
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/8865d690-a00d-405a-ad89-018dd49e7e31)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/7f57876e-4ef4-4ef9-8474-da056b1c8e78)
+
 
 ## Google Palm Api [PALM_API_KEY]
 Navigate to [Google Palm Api Key page](https://makersuite.google.com/app/apikey), Click on "Create API Key in new project" and get API Key
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/2374ee49-4775-46b8-9f70-21323e03257f)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/bec58b1b-a4d3-4655-ba9a-ea46884abad0)
+
 
 #### Get OpenAI Key [OPENAI_API_KEY]
 Application requires OpenAI API Key, sign up for OpenAI API on [this page](https://platform.openai.com/account/api-keys). Once you signed up and logged in, click on Personal, and select View API keys in drop-down menu. Create and copy the API Key
