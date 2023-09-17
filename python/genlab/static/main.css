@@ -514,7 +514,7 @@ footer {
 
 .form-label-font
 {
-   color: #0072c6;
+   color: #673ab7;
    margin-bottom: 0rem
 }
 ol,
@@ -522,6 +522,11 @@ ul,
 dl {
   margin-top: 0;
   margin-bottom: 0rem;
+}
+
+.txtarea-main
+{
+  margin-top: 5px;
 }
 
 .form-group 

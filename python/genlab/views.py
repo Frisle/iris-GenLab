@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, jsonify
+from flask import Blueprint, render_template, request, jsonify,flash
 from flask_login import login_required, current_user
 from .models import *
 from .myconfig import *
@@ -28,15 +28,17 @@ def index():
 @views.route('/ner', methods=["GET", "POST"])
 @login_required
 def ner():
-     if request.method == 'POST':
+     if request.method == 'POST':            
             raw_text = request.form['rawtext']
-            # Load English tokenizer, tagger, parser and NER
-            nlp = spacy.load('en_core_web_sm')
-            docx = nlp(raw_text)
-            html = displacy.render(docx, style="ent")
-            html = html.replace("\n\n", "\n")
-            result = HTML_WRAPPER.format(html)
-            return render_template('ner.html', user=current_user, result=result,rawtext = raw_text, pst=True )
+            result = ''            
+            if len(raw_text.strip()) > 0:
+               # Load English tokenizer, tagger, parser and NER
+               nlp = spacy.load('en_core_web_sm')
+               docx = nlp(raw_text)
+               html = displacy.render(docx, style="ent")
+               html = html.replace("\n\n", "\n")
+               result = HTML_WRAPPER.format(html)
+               return render_template('ner.html', user=current_user, result=result,rawtext = raw_text, pst=True )
         
      return render_template('ner.html', user=current_user, pst=False)
 
@@ -44,13 +46,14 @@ def ner():
 @views.route('/sentimental', methods=["GET", "POST"])
 @login_required
 def sent():
-     if request.method == 'POST':
+     if request.method == 'POST':                      
             raw_text = request.form['rawtext']
-            classifier = pipeline('sentiment-analysis')
-            result = classifier(raw_text)
-            result = json.dumps(result)
-            
-            return render_template('sentimental.html', user=current_user, result=result,rawtext = raw_text, pst=True )
+            result = ''            
+            if len(raw_text.strip()) > 0:
+               classifier = pipeline('sentiment-analysis')
+               result = classifier(raw_text)
+               result = json.dumps(result)             
+               return render_template('sentimental.html', user=current_user, result=result,rawtext = raw_text, pst=True )
         
      return render_template('sentimental.html', user=current_user, pst=False)
 
@@ -58,16 +61,17 @@ def sent():
 @views.route('/tgpt2', methods=["GET", "POST"])
 @login_required
 def tgpt2():
-     if request.method == 'POST':
+     if request.method == 'POST':            
             raw_text = request.form['rawtext']
-            classifier = pipeline('text-generation', model = 'gpt2')
-            result= classifier(raw_text, max_length = 30, num_return_sequences=3)
-            result = json.dumps(result)
-            
-            result = result.replace("\n\n", "\n")
-            result = HTML_WRAPPER.format(result)
+            result = ''            
+            if len(raw_text.strip()) > 0:
+               classifier = pipeline('text-generation', model = 'gpt2')
+               text= classifier(raw_text, max_length = 30, num_return_sequences=3)            
+               result = ''
+               for obj in text:               
+                    result =  result +'\n' + obj["generated_text"]             
 
-            return render_template('tgpt2.html', user=current_user, result=result,rawtext = raw_text, pst=True )
+               return render_template('tgpt2.html', user=current_user, result=result,rawtext = raw_text, pst=True )
         
      return render_template('tgpt2.html', user=current_user, pst=False)
 
@@ -77,19 +81,23 @@ def tgpt2():
 @login_required
 def palmapi():
      if request.method == 'POST':        
-
           raw_text = request.form['rawtext']
-          palm.configure(api_key=PALM_API_KEY)
-          models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
-          model = models[0].name          
-          completion = palm.generate_text(
-          model=model,
-          prompt=raw_text,
-          temperature=0,
-          # The maximum length of the response
-          max_output_tokens=800,
-          )
-          return render_template('palmapi.html', user=current_user, result=completion.result,rawtext = raw_text, pst=True )
+          result = ''
+          if len(PALM_API_KEY) < 1:               
+               flash('PALM_API_KEY not found. Please update the key in myconfig.py file', category='error')
+               return render_template('palmapi.html', user=current_user, rawtext = raw_text, pst=False)          
+          if len(raw_text.strip()) > 0:          
+               palm.configure(api_key=PALM_API_KEY)
+               models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
+               model = models[0].name          
+               completion = palm.generate_text(
+               model=model,
+               prompt=raw_text,
+               temperature=0,
+               # The maximum length of the response
+               max_output_tokens=800,
+               )
+               return render_template('palmapi.html', user=current_user, result=completion.result,rawtext = raw_text, pst=True )
 
      return render_template('palmapi.html', user=current_user, pst=False)
 
@@ -98,21 +106,24 @@ def palmapi():
 @login_required
 def gflan():
      if request.method == 'POST':
-          os.environ['HUGGINGFACEHUB_API_TOKEN'] = HUGGINGFACEHUB_API_TOKEN
-
-          #Flan, by Google
           raw_text = request.form['rawtext']
-          question = raw_text
-          template = """Question: {question}
-          Answer: Let's think step by step."""
-          prompt = PromptTemplate(template=template, input_variables=["question"])
-          repo_id = "google/flan-t5-xxl"
-          llm = HuggingFaceHub(
-          repo_id=repo_id, model_kwargs={"temperature": 0.5, "max_length": 64}
-          )
-          llm_chain = LLMChain(prompt=prompt, llm=llm)
-          result = llm_chain.run(question)
-          return render_template('gflan.html', user=current_user, result=result,rawtext = raw_text, pst=True )
+          result = ''
+          if len(HUGGINGFACEHUB_API_TOKEN) < 1:               
+               flash('HUGGINGFACEHUB_API_TOKEN not found. Please update the key in myconfig.py file', category='error')
+               return render_template('gflan.html', user=current_user, rawtext = raw_text, pst=False)          
+          if len(raw_text.strip()) > 0:
+               os.environ['HUGGINGFACEHUB_API_TOKEN'] = HUGGINGFACEHUB_API_TOKEN
+               #Flan, by Google               
+               question = raw_text
+               template = """Question: {question}"""
+               prompt = PromptTemplate(template=template, input_variables=["question"])
+               repo_id = "google/flan-t5-xxl"
+               llm = HuggingFaceHub(
+               repo_id=repo_id, model_kwargs={"temperature": 0.5, "max_length": 64}
+               )
+               llm_chain = LLMChain(prompt=prompt, llm=llm)
+               result = llm_chain.run(question)
+               return render_template('gflan.html', user=current_user, result=result,rawtext = raw_text, pst=True )
 
      return render_template('gflan.html', user=current_user, pst=False)
 
@@ -120,21 +131,25 @@ def gflan():
 @views.route('/openai', methods = ["GET", "POST"])
 @login_required
 def openai():
-     if request.method == 'POST':
-          MODEL = "gpt-3.5-turbo-0613"
-          K = 10
-          os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
-                         
-          try:
-               llm = ChatOpenAI(temperature=0,openai_api_key=apiKey, model_name=MODEL, verbose=False) 
-               entity_memory = ConversationEntityMemory(llm=llm, k=K )
-               qa = ConversationChain(llm=llm,   prompt=ENTITY_MEMORY_CONVERSATION_TEMPLATE, memory=entity_memory)
-          except Exception as e:  
-               return e
-          
+     if request.method == 'POST':       
           raw_text = request.form['rawtext']
-          result =  qa.run(raw_text)    
-          return render_template('openai.html', user=current_user, result=result,rawtext = raw_text, pst=True )
+          result = ''
+          if len(OPENAI_API_KEY) < 1:               
+               flash('OPENAI_API_KEY not found. Please update the key in myconfig.py file', category='error')
+               return render_template('openai.html', user=current_user, rawtext = raw_text, pst=False)
+          if len(raw_text.strip()) > 0:
+               MODEL = "gpt-3.5-turbo-0613"
+               K = 10
+               os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY                        
+               try:
+                    llm = ChatOpenAI(temperature=0,openai_api_key=OPENAI_API_KEY, model_name=MODEL, verbose=False) 
+                    entity_memory = ConversationEntityMemory(llm=llm, k=K )
+                    qa = ConversationChain(llm=llm,   prompt=ENTITY_MEMORY_CONVERSATION_TEMPLATE, memory=entity_memory)
+               except Exception as e:  
+                    flash(e, category='error')
+                    return render_template('openai.html', user=current_user, rawtext = raw_text, pst=False) 
+               result =  qa.run(raw_text)    
+               return render_template('openai.html', user=current_user, result=result,rawtext = raw_text, pst=True )
 
      return render_template('openai.html', user=current_user, pst=False)
 

@@ -21,7 +21,7 @@
 	padding:10px;
 }
 #custom_card2{
-	background-color:#4285f4;
+	background-color:#7549c4;
 	color:#fff;
 	padding:10px;
 }
@@ -33,7 +33,6 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -94,6 +93,7 @@
       {% block head %}{% endblock %}            
     </div>
   </div>
+   <div class="container">
   {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
     'error' %}
@@ -107,15 +107,14 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
     {% endif %} {% endfor %} {% endif %} {% endwith %}
-
+  </div>
 <div class="container" >
   {% block content %}{% endblock %}
 <div class="chatbox">
         <div class="chatbox__support">
             <div class="chatbox__header">
                 <div class="chatbox__image--header">
-                    <img src="{{ url_for('static',filename='images/chat-support-icon.png') }}" alt="image">                       
-
+                    <img src="{{ url_for('static',filename='images/chat-support-icon.png') }}" alt="image">                     
                 </div>
                 <div class="chatbox__content--header">
                     <h4 class="chatbox__heading--header">iris-Generative Lab app support</h4>

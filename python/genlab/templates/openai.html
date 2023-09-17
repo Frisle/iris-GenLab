@@ -1,32 +1,27 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} 
 
 {% block head %}
-      <h2 class="display-3">Generation </h2>
-      <p>paragraph can be entered</p>
+      <h2 class="display-4">OpenAI ChatGPT</h2>
+      <p>OpenAI is a private research laboratory that aims to develop and direct artificial intelligence (AI)</p>
 {% endblock %}
 
 
 {% block content %}
 <form method="POST">
-		<textarea rows="5" cols="5" required="true" name="rawtext" class="form-control">
-			{{ rawtext }}
-		</textarea>
-		<button type="reset" class="btn btn-primary"><i class="fa fa-eraser"></i> Clear</button>
-        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
-	</form>
+	<textarea rows="7" required="true" name="rawtext" class="form-control txtarea-main">
+		{{ rawtext }}
+	</textarea>
+	<button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>   
+	<a class="btn btn-primary waves-effect" href="/" role="button"> <i class="fa fa-eraser"></i> Refresh</a>
+</form>
 {% if pst %}
 {% filter markdown %}
 {% endfilter %}
 <hr/>
-<div class="container">
-	<div class="row">	
-	<div class="col-md-8">
-          <div class="card mb-10 shadow-sm" id="custom_card2">
-          	<h4>Result of Data</h4>
-			<p>{{ result|markdown }}</p>			
+          <div class="card shadow-sm" id="custom_card2">
+          	<h4>Result</h4>
+			<p>{{ result }}</p>			
 		</div>
-	</div>
-</div>
 {% endif %}
 {% endblock %}
 

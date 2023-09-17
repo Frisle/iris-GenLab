@@ -9,6 +9,7 @@ flask_login
 Flask-Markdown
 transformers
 nltk
+openai
 langchain
 unstructured
 google-generativeai

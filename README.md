@@ -7,6 +7,7 @@ The application contains user registration and authentication with the help of F
 
 # Features
 * User registration and authentication
+* Chatbot functionality with the help of Torch (python machine learning library)
 * Named entity recognition (NER), natural language processing (NLP) method for text information extraction
 * Sentiment analysis, NLP approch that identifies the emotional tone of the message 
 * HuggingFace Text generation with the help of GPT2 LLM (Large Language Model) model and Hugging Face pipeline
@@ -49,7 +50,7 @@ docker-compose up -d
 ## HuggingFace
   from hugging face
 ## Google Palm Api
-  from google palm Api
+  https://makersuite.google.com/app/apikey
 ## OpenAI
   from open AI
 #### Get OpenAI Key

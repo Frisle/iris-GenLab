@@ -1,17 +1,14 @@
 import os
 from . import templates
-from importlib import resources as impresources
 import random
 import json
 import importlib.resources
-
 import torch
-
 from .model import NeuralNet
 from .nltk_utils import bag_of_words, tokenize
 
-#device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-device = 'cpu'
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+#device = 'cpu'
 
 with importlib.resources.open_text("genlab", "intents.json") as json_data:
     intents = json.load(json_data)

@@ -1,14 +1,14 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} 
 
 {% block head %}
-      <h2 class="display-4">sentiment analysis (opinion mining) </h2>
-      <p>Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional</p>
+      <h3 class="display-4">Sentiment Analysis (opinion mining) </h3>
+      <p>Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional tone of the message </p>
 {% endblock %}
 
 
 {% block content %}
 <form method="POST">
-	<textarea rows="7" required="true" name="rawtext" class="form-control">
+	<textarea rows="7" required="true" name="rawtext" class="form-control txtarea-main">
 		{{ rawtext }}
 	</textarea>
 	<button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>   
@@ -20,7 +20,7 @@
 <hr/>
           <div class="card shadow-sm" id="custom_card2">
           	<h4>Result</h4>
-			<p>{{ result|markdown }}</p>			
+			<p>{{ result }}</p>			
 		</div>
 {% endif %}
 {% endblock %}

@@ -4,6 +4,7 @@ DB_PASS = "SYS"
 DB_URL = "iris"
 DB_PORT = '1972'
 DB_NAMESPACE = "USER"
-HUGGINGFACEHUB_API_TOKEN = "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"
-PALM_API_KEY = "AIzaSyDmwLWPnbAOv79Uzes9dyQrK3MKZEWer7U"
+#Please add hugginface,PalmAPI and OpenAI key here
+HUGGINGFACEHUB_API_TOKEN = ""
+PALM_API_KEY = ""
 OPENAI_API_KEY = ""
