@@ -5,6 +5,7 @@ I absolutely loved the movie! It was fantastic and heartwarming.
 
 ```bash
 # attach to the running IRIS container
+docker-compose exec iris bash
 # run the script
 $ irispython ./python/app.py
 ```
