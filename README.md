@@ -41,6 +41,10 @@ docker-compose build
 docker-compose up -d 
 ```
 
+
+
+
+# Getting Started 
 # Required Keys
 ## HuggingFace
   from hugging face
@@ -48,9 +52,13 @@ docker-compose up -d
   from google palm Api
 ## OpenAI
   from open AI
+#### Get OpenAI Key
+Application requires OpenAI API Key, sign up for OpenAI API on [this page](https://platform.openai.com/account/api-keys). Once you signed up and logged in, click on Personal, and select View API keys in drop-down menu. Create and copy the API Key
+
+![image](https://github.com/mwaseem75/irisChatGPT/assets/18219467/7e7c7880-b9ac-4a60-9ec9-289dd2375a73)
 
 
-# Getting Started 
+
 ## Run the application
 To run the application Navigate to [**http://localhost:4040**](http://localhost:4040) 
 #### Home Page
