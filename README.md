@@ -43,38 +43,46 @@ docker-compose build
 docker-compose up -d 
 ```
 
-
-
-
 # Getting Started 
-# Required Keys
-## HuggingFace
-  from hugging face
-## Google Palm Api
-  https://makersuite.google.com/app/apikey
-## OpenAI
-  from open AI
-#### Get OpenAI Key
-Application requires OpenAI API Key, sign up for OpenAI API on [this page](https://platform.openai.com/account/api-keys). Once you signed up and logged in, click on Personal, and select View API keys in drop-down menu. Create and copy the API Key
+## Required Keys
+#### HuggingFace [HUGGINGFACEHUB_API_TOKEN]
+Signup with hugging face and navigate to setting [Hugging Face account settings](https://huggingface.co/settings/tokens), click on the new token to create a new token  
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/8865d690-a00d-405a-ad89-018dd49e7e31)
 
+## Google Palm Api [PALM_API_KEY]
+Navigate to [Google Palm Api Key page](https://makersuite.google.com/app/apikey), Click on "Create API Key in new project" and get API Key
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/2374ee49-4775-46b8-9f70-21323e03257f)
+
+#### Get OpenAI Key [OPENAI_API_KEY]
+Application requires OpenAI API Key, sign up for OpenAI API on [this page](https://platform.openai.com/account/api-keys). Once you signed up and logged in, click on Personal, and select View API keys in drop-down menu. Create and copy the API Key
 ![image](https://github.com/mwaseem75/irisChatGPT/assets/18219467/7e7c7880-b9ac-4a60-9ec9-289dd2375a73)
 
+Open myconfig.py file in python/genlab folder and enter the keys
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/6ad5f32a-f96d-4f52-8c0c-d17b6ecbe8f6)
 
 
 ## Run the application
+Run the below command in Git Bash terminal
+'''
+docker-compose exec iris bash
+'''
+Now run below command to start flask application
+'''
+irispython ./python/app.py
+'''
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/1585dd85-3ac0-47a8-8858-cd844b13a2a1)
+
 To run the application Navigate to [**http://localhost:4040**](http://localhost:4040) 
 #### Home Page
-![image](https://github.com/mwaseem75/IRIS-FlaskBlog/assets/18219467/a484538b-1fb7-435c-9254-25f1dc6b8c92)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/3041ee1a-6f04-47df-a82c-f4157780ff79)
 
 #### Register a User
 To register a user, Click on Sign Up link
 ![signup](https://github.com/mwaseem75/iris-GenLab/assets/18219467/a0b613d6-7c1c-4607-9f77-a9c7c953e095)
 
-
 Once registered, the user will log in automatically, To sign out click on the User Name link and then click on Sign out.
 In order to log in, click on sign in link
 ![login](https://github.com/mwaseem75/iris-GenLab/assets/18219467/126c3546-4f62-409c-91fd-38db23471eb6)
-
 
 #### Named entity recognition (NER)
 ![ner](https://github.com/mwaseem75/iris-GenLab/assets/18219467/4e33e5f5-210e-4670-8aca-11a31b3d9a91)
