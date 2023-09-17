@@ -68,18 +68,31 @@ To run the application Navigate to [**http://localhost:4040**](http://localhost:
 
 #### Register a User
 To register a user, Click on Sign Up link
-![image](https://github.com/mwaseem75/IRIS-FlaskBlog/assets/18219467/acf3e68b-cf2d-4ce1-9997-b4b648ec845f)
+![signup](https://github.com/mwaseem75/iris-GenLab/assets/18219467/a0b613d6-7c1c-4607-9f77-a9c7c953e095)
+
 
 Once registered, the user will log in automatically, To sign out click on the User Name link and then click on Sign out.
 In order to log in, click on sign in link
-![image](https://github.com/mwaseem75/IRIS-FlaskBlog/assets/18219467/047f88dd-db3d-45d3-ba57-d7d83a30e6d8)
+![login](https://github.com/mwaseem75/iris-GenLab/assets/18219467/126c3546-4f62-409c-91fd-38db23471eb6)
+
 
 #### Named entity recognition (NER)
+![ner](https://github.com/mwaseem75/iris-GenLab/assets/18219467/4e33e5f5-210e-4670-8aca-11a31b3d9a91)
+
 #### Sentiment analysis
+![sentimental](https://github.com/mwaseem75/iris-GenLab/assets/18219467/4cbbc28f-7fd3-4dad-a664-55d247c4836a)
+
 #### HuggingFace, Text generation (Gpt-2)
+![tgpt2](https://github.com/mwaseem75/iris-GenLab/assets/18219467/8080f974-0109-4c13-a1bb-b8614facfa55)
+
 #### Google PALM API
+![palmAPI](https://github.com/mwaseem75/iris-GenLab/assets/18219467/32f97af1-c59a-41a0-a6b5-02ae075e7e3f)
+
 #### Google Flan-T5 XXL
+![gflan](https://github.com/mwaseem75/iris-GenLab/assets/18219467/fa104fdf-d419-43d2-8249-2ef6dcccff39)
+
 #### OpenAI
+![openAI](https://github.com/mwaseem75/iris-GenLab/assets/18219467/8f0291b7-4c43-4eea-a4c7-cb3101e6a77d)
 
 
 ## Application database
@@ -88,8 +101,10 @@ SQLALchemy will create below table:
 * user: To store User information
 
 To view table details, navigate to 
-[**http://localhost:52775/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER#**](http://localhost:52775/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER#)
-![image](https://github.com/mwaseem75/IRIS-FlaskBlog/assets/18219467/de303374-af23-40cc-874b-cad560ca1a87)
+http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&
+[**http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&**](http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/281125ab-4ce0-406c-8bd4-159ca7d9424a)
+
 
 
 ## Special Thanks to:
