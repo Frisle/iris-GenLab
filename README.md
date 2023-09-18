@@ -2,8 +2,8 @@
 IRIS-GenLab is a generative AI Application that leverages the functionality of Flask web framework, SQLALchemy ORM, and InterSystems IRIS. 
 The application contains user registration and authentication with the help of Flask-Login python library.
 
-[![one](https://img.shields.io/badge/Platform-InterSystems%20IRIS-blue)](https://www.intersystems.com/data-platform/)
-[![one](https://img.shields.io/badge/WebFrameWork-Flask-blue)](https://flask.palletsprojects.com/en/2.3.x/)
+[![one](https://img.shields.io/badge/Platform-InterSystems%20IRIS-blue)](https://www.intersystems.com/data-platform/) [![one](https://img.shields.io/badge/WebFrameWork-Flask-blue)](https://flask.palletsprojects.com/en/2.3.x/)
+
 [![one](https://img.shields.io/badge/ORM-SQLAlchemy-green)](https://www.sqlalchemy.org/)
 [![one](https://img.shields.io/badge/Authentication-Flask%20Login-yellow)](https://flask-login.readthedocs.io/en/latest/)
 [![one](https://img.shields.io/badge/ChatBot-PyTorch-blue)](https://pytorch.org/)
