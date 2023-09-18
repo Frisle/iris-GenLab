@@ -80,7 +80,8 @@ Text generation with the help of GPT2 LLM (Large Language Model) model and Huggi
 
 ## Google PALM API
 Google API to access the advanced capabilities of Google's large language models (LLM) like PaLM2 with the PaLM API
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/665e8e13-ecbe-4548-bb9e-3555c35d452d)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/a84e6c1f-8cd2-457e-ba85-e229f6f82f82)
+
 Google PALM API requires [PALM_API_KEY] key
 #### How to get Google Palm Api key
 Navigate to [Google Palm Api Key page](https://makersuite.google.com/app/apikey), Click on "Create API Key in new project" and get API Key
@@ -88,7 +89,7 @@ Navigate to [Google Palm Api Key page](https://makersuite.google.com/app/apikey)
 
 ## Google Flan-T5-XXL
 Flan-T5 is fine-tuned on a large corpus of text data that was not filtered for explicit content. Mainly used for Translation and question-answering
-![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/b37f3fae-5244-4c29-ba34-fc5a8339da9c)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/06e9a45e-a073-4c66-a008-298433ceaad8)
 Google Flan-T5-XXl requires [HUGGINGFACEHUB_API_TOKEN] key
 #### How to get Hugging Face key
 Signup with hugging face and navigate to setting [Hugging Face account settings](https://huggingface.co/settings/tokens), click on the new token to create a new token  
