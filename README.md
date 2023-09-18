@@ -110,7 +110,6 @@ SQLALchemy will create below table:
 * user: To store User information
 
 To view table details, navigate to 
-http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&
 [**http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&**](http://localhost:55038/csp/sys/exp/%25CSP.UI.Portal.SQL.Home.zen?$NAMESPACE=USER&)
 ![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/a4d5d474-65eb-4026-a59b-7727fe7c592d)
 
