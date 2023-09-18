@@ -182,7 +182,7 @@ def predict():
 #def bard():
 #     if request.method == 'POST':
 #            raw_text = request.form['rawtext']                               
-#            bard = Bard(token="ZwipnKONuFVeGA5oFAXVHWUTNfTdtFJcIEBwydZxowlTiSsatYSI8QU6t5K93d36xmsnKQ.") 
+#            bard = Bard(token="") 
 #            result = bard.get_answer(raw_text)                 
 #            result = result['content']                     
 #            return render_template('bard.html', user=current_user, result=result,rawtext = raw_text, pst=True )

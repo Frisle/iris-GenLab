@@ -8,7 +8,7 @@ db = SQLAlchemy()
 
 def create_app(database_uri):
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = "iris-nlpapp"
+    app.config['SECRET_KEY'] = "iris-genlab"
     # Getting DB parameters from myconfig.py file
     app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
     app.app_context().push()
