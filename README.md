@@ -1,6 +1,23 @@
+## apptools-django
+[![Repo-GitHub](https://img.shields.io/badge/dynamic/xml?color=gold&label=GitHub%20module.xml&prefix=ver.&query=%2F%2FVersion&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsergeymi37%2Fapptools-django%2Fmaster%2Fmodule.xml)]
+(https://raw.githubusercontent.com/sergeymi37/apptools-django/master/module.xml)
+
+[![OEX-zapm](https://img.shields.io/badge/dynamic/json?url=https:%2F%2Fpm.community.intersystems.com%2Fpackages%2Fapptools-django%2F&label=ZPM-pm.community.intersystems.com&query=$.version&color=green&prefix=apptools-django)](https://pm.community.intersystems.com/packages/apptools-django)
+
+[![Docker-ports](https://img.shields.io/badge/dynamic/yaml?color=blue&label=docker-compose&prefix=ports%20-%20&query=%24.services.iris.ports&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsergeymi37%2Fapptools-django%2Fmaster%2Fdocker-compose.yml)](https://raw.githubusercontent.com/sergeymi37/apptools-django/master/docker-compose.yml)
+
+[![one](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://github.com/mwaseem75/iris-GenLab/blob/master/LICENSE) 
+
+![one](https://img.shields.io/badge/waseem-waseem-blue)
+
+[![OEX](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://github.com/mwaseem75/iris-GenLab/blob/master/LICENSE) 
+[![license](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://github.com/mwaseem75/iris-GenLab/blob/master/LICENSE)
+
+
+
 # Summary
 IRIS-GenLab is a generative AI Application that leverages the functionality of Flask web framework, SQLALchemy ORM, and InterSystems IRIS. 
-The application contains user registration and authentication with the help of Flask-Login python library, a responsive user interface to create and edit posts.3
+The application contains user registration and authentication with the help of Flask-Login python library.
 
 # Application layout
 ![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/2717f704-a1d7-4e2c-9a48-609469c41cec)
