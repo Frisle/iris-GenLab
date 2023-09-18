@@ -2,11 +2,7 @@
 IRIS-GenLab is a generative AI Application that leverages the functionality of Flask web framework, SQLALchemy ORM, and InterSystems IRIS. 
 The application contains user registration and authentication with the help of Flask-Login python library.
 
-[![one](https://img.shields.io/badge/Platform-InterSystems%20IRIS-blue)](https://www.intersystems.com/data-platform/) [![one](https://img.shields.io/badge/WebFrameWork-Flask-blue)](https://flask.palletsprojects.com/en/2.3.x/) [![one](https://img.shields.io/badge/ORM-SQLAlchemy-green)](https://www.sqlalchemy.org/) [![one](https://img.shields.io/badge/Authentication-Flask%20Login-yellow)](https://flask-login.readthedocs.io/en/latest/) [![one](https://img.shields.io/badge/ChatBot-PyTorch-blue)](https://pytorch.org/)
-[![OEX](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://github.com/mwaseem75/iris-GenLab/blob/master/LICENSE) 
-[![license](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://github.com/mwaseem75/iris-GenLab/blob/master/LICENSE)
-
-
+[![one](https://img.shields.io/badge/Platform-InterSystems%20IRIS-blue)](https://www.intersystems.com/data-platform/) [![one](https://img.shields.io/badge/WebFrameWork-Flask-blue)](https://flask.palletsprojects.com/en/2.3.x/) [![one](https://img.shields.io/badge/ORM-SQLAlchemy-green)](https://www.sqlalchemy.org/) [![one](https://img.shields.io/badge/Authentication-Flask%20Login-yellow)](https://flask-login.readthedocs.io/en/latest/) [![one](https://img.shields.io/badge/ChatBot-PyTorch-blue)](https://pytorch.org/) [![one](https://img.shields.io/badge/NLP-spaCy-yellow)](https://spacy.io/) [![one](https://img.shields.io/badge/Pipeline-Hugging%20Face-yellow)](https://huggingface.co/) [![one](https://img.shields.io/badge/LLM-GPT2-yellow)](https://huggingface.co/gpt2) [![one](https://img.shields.io/badge/Generative%20AI%20API-PALM-yellow)](https://developers.generativeai.google/)  [![one](https://img.shields.io/badge/Google%20AI%20LLM-FLAN%20T5%20XXL-yellow)](https://huggingface.co/google/flan-t5-xxl) [![one](https://img.shields.io/badge/OpenAI-ChatGPT-yellow)](https://openai.com/) [![OEX](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://github.com/mwaseem75/iris-GenLab/blob/master/LICENSE) [![license](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://github.com/mwaseem75/iris-GenLab/blob/master/LICENSE)
 
 
 # Application layout
