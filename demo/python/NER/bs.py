@@ -8,12 +8,7 @@ import requests
 from message import PostMessage
 from obj import PostClass
 
-class RedditService(BusinessService):
-    """
-    This service use an Ens.InboundAdapter to, on_process_input every 5
-    seconds, use requests to fetch self.limit posts as data from the reddit
-    API before calling the FilterPostRoutingRule process.
-    """
+class NERService(BusinessService):   
     def get_adapter_type():
         """
         Name of the registred Adapter
@@ -61,7 +56,7 @@ class RedditService(BusinessService):
             for key, value in enumerate(data['data']['children']):
                 if value['data']['selftext']=="":
                     continue
-                post = PostClass.from_dict(value['data'])
+                post = PostClass.from_dict("value['data']")
                 post.original_json = json.dumps(value)
                 
                 if not updateLast:

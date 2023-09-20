@@ -2,7 +2,7 @@ import bo, bp , bs, adapter
 
 CLASSES = {
     "Python.FileOperation": bo.FileOperation,   
-    "Python.NERService": bs.RedditService,
+    "Python.NERService": bs.NERService,
     "Python.FilterPostRoutingRule": bp.FilterPostRoutingRule
 }
 
