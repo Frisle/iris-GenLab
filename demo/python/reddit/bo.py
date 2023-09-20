@@ -7,7 +7,6 @@ import os
 import datetime
 import smtplib
 from email.mime.text import MIMEText
-from python.genlab import views
 
 class EmailOperation(BusinessOperation):
     """
@@ -85,10 +84,7 @@ class FileOperation(BusinessOperation):
             title = request.post.title
             author = request.post.author
             url = request.post.url            
-            #text = request.post.selftext
-            self.log_info("Starting "+ request.found+".txt")
-            text = views.gflan_prod(request.post.selftext)
-            self.log_info("Text "+ request.found+".txt")
+            text = request.post.selftext           
             ts = datetime.datetime.fromtimestamp(request.post.created_utc).__str__()
 
         line = ts+" : "+title+" : "+author+" : "+url
