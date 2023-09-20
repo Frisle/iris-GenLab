@@ -161,28 +161,6 @@ def predict():
     message = {"answer": response}
     return jsonify(message)
 
-#used in PEX Production
-def gflan_prod(raw_text):          
-          result = ''
-          if len(HUGGINGFACEHUB_API_TOKEN) < 1:                              
-               return "HUGGINGFACEHUB_API_TOKEN not found"       
-          if len(raw_text.strip()) > 0:
-               os.environ['HUGGINGFACEHUB_API_TOKEN'] = HUGGINGFACEHUB_API_TOKEN
-               #Flan, by Google               
-               question = raw_text
-               template = """Question: {question}"""
-               prompt = PromptTemplate(template=template, input_variables=["question"])
-               repo_id = "google/flan-t5-xxl"
-               llm = HuggingFaceHub(
-               repo_id=repo_id, model_kwargs={"temperature": 0.5, "max_length": 64}
-               )
-               llm_chain = LLMChain(prompt=prompt, llm=llm)
-               result = llm_chain.run(question)
-               return result
-
-     return render_template('gflan.html', user=current_user, pst=False)
-
-
 #@views.route('/ner', methods=["GET", "POST"])
 #def ner():
 #     if request.method == 'POST':
