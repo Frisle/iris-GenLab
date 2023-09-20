@@ -117,4 +117,5 @@ To view table details, navigate to
 
 
 ## Special Thanks to:
-Evgeny Shvarov for: [iris-embedded-python-template](https://openexchange.intersystems.com/package/iris-embedded-python-template) template for guidance
+Evgeny Shvarov for: [iris-embedded-python-template](https://openexchange.intersystems.com/package/iris-embedded-python-template) template and 
+Guillaume Rongier for: [interoperability-embedded-python](https://github.com/grongierisc/interoperability-embedded-python) template for guidance
