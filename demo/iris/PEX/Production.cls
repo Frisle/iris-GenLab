@@ -11,7 +11,7 @@ XData ProductionDefinition
     <Setting Target="Adapter" Name="FilePath">/home/irisowner/dev/output/</Setting>
     <Setting Target="Host" Name="%settings">path=/home/irisowner/dev/output/</Setting>
   </Item>  
-  <Item Name="Python.RedditService" Category="" ClassName="Python.RedditService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  <Item Name="Python.NERService" Category="" ClassName="Python.NERService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="%settings">limit=10</Setting>
   </Item>  
   <Item Name="Python.FilterPostRoutingRule" Category="" ClassName="Python.FilterPostRoutingRule" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">

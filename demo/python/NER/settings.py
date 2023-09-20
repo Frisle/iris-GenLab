@@ -2,7 +2,7 @@ import bo, bp , bs, adapter
 
 CLASSES = {
     "Python.FileOperation": bo.FileOperation,   
-    "Python.RedditService": bs.RedditService,
+    "Python.NERService": bs.RedditService,
     "Python.FilterPostRoutingRule": bp.FilterPostRoutingRule
 }
 
@@ -45,9 +45,9 @@ PRODUCTIONS = [{
                 ]
             },
             {
-                "@Name": "Python.RedditService",
+                "@Name": "Python.NERService",
                 "@Category": "",
-                "@ClassName": "Python.RedditService",
+                "@ClassName": "Python.NERService",
                 "@PoolSize": "1",
                 "@Enabled": "true",
                 "@Foreground": "false",
