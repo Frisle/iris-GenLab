@@ -8,7 +8,7 @@ set -m
 iop --init
 
 # load production
-iop -m /home/irisowner/dev/demo/python/reddit/settings.py
+iop -m /home/irisowner/dev/demo/python/NER/settings.py
 
 # set default production
 iop --default PEX.Production

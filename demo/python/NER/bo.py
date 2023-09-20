@@ -153,9 +153,6 @@ class HeartBeatOperation(BusinessOperation):
         self.adapter.on_task()
         return 
 
-# Utils.register_component('adapter','TestHeartBeat','/irisdev/app/src/python/demo/',1,'Python.TestHeartBeat')
-# Utils.register_component('bo','HeartBeatOperation','/irisdev/app/src/python/demo/reddit/',1,'Python.HeartBeatOperation')
-
 if __name__ == '__main__':
     bo = FileOperation()
 
