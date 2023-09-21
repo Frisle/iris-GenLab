@@ -64,6 +64,9 @@ Once registered, the user will log in automatically, To sign out click on the Us
 In order to log in, click on sign in link
 ![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/83e0776c-2c87-4a6e-adf4-141065db0451)
 
+## Chatbot functionality with the help of Torch (python machine learning library)
+Click on chatbot icon to start chating
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/e71ba8d2-f379-4d56-a7b3-770005fe08c8)
 
 ## Named entity recognition (NER)
 Named entity recognition with spaCy, a open-source library for Natural Language Processing (NLP) in Python
