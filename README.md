@@ -8,11 +8,13 @@ IRIS-GenLab is a generative AI Application that leverages the functionality of F
 * User registration and authentication
 * Chatbot functionality with the help of Torch (python machine learning library)
 * Named entity recognition (NER), natural language processing (NLP) method for text information extraction
+* **PEX production to apply Named entity recognition (NER) on the given text**
 * Sentiment analysis, NLP approch that identifies the emotional tone of the message 
 * HuggingFace Text generation with the help of GPT2 LLM (Large Language Model) model and Hugging Face pipeline
 * Google PALM API, to access the advanced capabilities of Google's large language models (LLM) like PaLM2
 * Google Flan-T5 XXL, a fine-tuned on a large corpus of text data that was not filtered for explicit contents.
 * OpenAI is a private research laboratory that aims to develop and direct artificial intelligence (AI)
+
 
 # Installation
 1. Clone/git pull the repo into any local directory
@@ -67,6 +69,16 @@ In order to log in, click on sign in link
 Named entity recognition with spaCy, a open-source library for Natural Language Processing (NLP) in Python
 ![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/03116a37-e6e9-4029-adb8-e8ccab8985cf)
 
+
+## PEX production to apply Named entity recognition (NER) on the given text
+The repository already has running production, To view the production navigate to the below URL
+[**http://localhost:55038/csp/irisapp/EnsPortal.ProductionConfig.zen?$NAMESPACE=IRISAPP**](http://localhost:55038/csp/irisapp/EnsPortal.ProductionConfig.zen?$NAMESPACE=IRISAPP)
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/20aa66be-c57b-4e58-8ae0-39ff9fb30dd6)
+Select Python.NERService and go to the message viewer from the messages tab 
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/9ab5d505-1fdf-4f5b-9970-f67616537a7b)
+Click on View raw content to view message details
+![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/6c73d3db-8007-44cf-85e5-ea118d254eca)
+The message displays NER text(selftext) along with the actual message
 
 ## Sentiment analysis
 Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional tone of the message
