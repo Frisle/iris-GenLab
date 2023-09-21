@@ -21,16 +21,13 @@ class FileOperation(BusinessOperation):
 
     def on_message(self, request):
         
-        ts = title = author = url = text = ""
+        title =  text = ""
 
         if (request.post is not None):
-            title = request.post.title
-            author = request.post.author
-            url = request.post.url            
-            text = request.post.selftext           
-            ts = datetime.datetime.fromtimestamp(request.post.created_utc).__str__()
+            title = request.post.title                       
+            text = request.post.NERtext                       
 
-        line = ts+" : "+title+" : "+author+" : "+url
+        line = title
         filename = request.found+".txt"
 
 

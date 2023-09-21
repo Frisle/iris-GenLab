@@ -22,21 +22,12 @@ class FilterPostRoutingRule(BusinessProcess):
     def iris_to_python(self, request:'iris.dc.Demo.PostMessage'):
 
         request = PostMessage(post=PostClass(title=request.Post.Title, 
-                                             selftext=request.Post.Selftext,
-                                             author=request.Post.Author, 
-                                             url=request.Post.Url,
-                                             created_utc=request.Post.CreatedUTC,
-                                             original_json=request.Post.OriginalJSON))
+                                             original_text=request.Post.OriginalJSON,
+                                             NERtext=request.Post.Selftext                                                                                                       
+                                             ))
         return self.on_python_message(request)
 
     def on_python_message(self, request: PostMessage):
-        if 'dog'.upper() in request.post.selftext.upper():
-            request.to_email_address = 'dog@company.com'
-            request.found = 'Dog'
-        if 'cat'.upper() in request.post.selftext.upper():
-            request.to_email_address = 'cat@company.com'
-            request.found = 'Cat'
-
         if request.found is not None:
             self.send_request_sync(self.target,request)
         return

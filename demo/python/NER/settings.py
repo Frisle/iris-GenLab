@@ -1,4 +1,4 @@
-import bo, bp , bs, adapter
+import bo, bp , bs
 
 CLASSES = {
     "Python.FileOperation": bo.FileOperation,   
