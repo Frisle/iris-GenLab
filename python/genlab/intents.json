@@ -27,6 +27,55 @@
       ]
     },
     {
+      "tag": "flask-login",
+      "patterns": ["what is flask login", "flask-login", "flask login"],
+      "responses": [
+        "Flask-Login provides user session management for Flask. It handles the common tasks of logging in, logging out, and remembering your users' sessions over extended periods of time."        
+      ]
+    },
+    {
+      "tag": "NER",
+      "patterns": ["what is NER", "tell me about Named Entiry Recongnition", "Named Entity Recognition"],
+      "responses": [
+        "Named entity recognition (NER) is a natural language processing (NLP) method that extracts information from text. NER involves detecting and categorizing important information in text known as named entities."        
+      ]
+    },
+    {
+      "tag": "sentimental-analysis",
+      "patterns": ["what is sentimental analysis", "Sentimental Analysis"],
+      "responses": [
+        "Sentiment analysis is the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information"        
+      ]
+    },
+    {
+      "tag": "text-generation",
+      "patterns": ["what is text generatoin", "Text Generation"],
+      "responses": [
+        "A Text Generation model, also known as a causal language model, can be trained on code from scratch to help the programmers in their repetitive coding tasks."        
+      ]
+    },
+    {
+      "tag": "Google-PALM-API",
+      "patterns": ["what is google palm api", "GOOGLE PALM API"],
+      "responses": [
+        "Google Palm APi access the advanced capabilities of Google's large language models like PaLM 2 with the PaLM API."        
+      ]
+    },
+    {
+      "tag": "Google-Flan-T5-XXL",
+      "patterns": ["what is Google Flan-T5 XXL", "GOOGLE FLAN T5 XXL"],
+      "responses": [
+        "Flan-T5 is fine-tuned on a large corpus of text data that was not filtered for explicit content or assessed for existing biases."        
+      ]
+    },
+    {
+      "tag": "OpenAI",
+      "patterns": ["what is OpenAI", "OpenAI"],
+      "responses": [
+        "OpenAI, a leading entity in the field of artificial intelligence, has developed OpenAI code interpreter, a specialized model trained on extensive data sets to process and generate programming code"        
+      ]
+    },
+    {
       "tag": "thanks",
       "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
       "responses": ["Happy to help!", "Any time!", "My pleasure"]
@@ -34,14 +83,14 @@
     {
       "tag": "items",
       "patterns": [
-        "What this application about?",
-        "What kinds of technology are there?",
+        "tell me about this app",
+        "What kinds of technology used?",
         "What do you have?"
       ],
       "responses": [
         "IRIS-GenLab is Generative AI application, AI appss continue to expand as it becomes more sophisticated and capable of producing high-quality outputs across different domains."        
       ]
-    },    
+    },        
     {
       "tag": "funny",
       "patterns": [
