@@ -61,7 +61,7 @@ To register a user, Click on Sign Up link
 ![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/4ed2fb6b-3da6-4c65-b791-b40c5e7c9280)
 
 Once registered, the user will log in automatically, To sign out click on the User Name link and then click on Sign out.
-In order to log in, click on sign in link
+In order to log in, click on Login link
 ![image](https://github.com/mwaseem75/iris-GenLab/assets/18219467/83e0776c-2c87-4a6e-adf4-141065db0451)
 
 ## Chatbot functionality with the help of Torch (python machine learning library)
