@@ -13,3 +13,4 @@ langchain
 unstructured
 google-generativeai
 openai
+langchain-community
